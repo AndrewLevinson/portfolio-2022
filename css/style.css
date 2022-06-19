@@ -152,9 +152,20 @@ section {
   border-bottom-color: var(--link-color);
 }
 
+.item h5::after {
+  content: '→';
+  display: inline-block;
+  vertical-align: text-top;
+  padding-left: 8px;
+  transform: translateX(-10px);
+  opacity: 0;
+  transition: 0.3s ease-in-out all;
+}
+
 .item:hover h5::after,
 .item a:focus h5::after {
-  content: ' →';
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .item a:hover,
