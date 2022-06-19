@@ -1,0 +1,124 @@
+/* Base Typography Styles
+Credit to Skeleton.css
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* @import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@300;400;600&display=swap'); */
+
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.7em;
+  line-height: 1.55;
+  font-weight: 400;
+  letter-spacing: normal;
+  /* letter-spacing: 0.005em; */
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+  /* font-family: Georgia, 'Times New Roman', Times, serif; */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-color);
+  background-color: var(--spacer-background);
+  transition: 0.2s ease-in color;
+}
+
+/* Typography
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 2.2rem;
+  font-weight: 500;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+  color: var(--header-text-color);
+  transition: 0.2s ease-in color;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 1.05;
+  letter-spacing: -0.1rem;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+h2 {
+  color: var(--grey-mid);
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+  line-height: 1.4;
+  letter-spacing: -0.01rem;
+}
+
+/* h3 {
+  font-size: 3rem;
+  line-height: 1.3;
+  letter-spacing: -0.1rem;
+} */
+
+h3 {
+  font-size: 2.5rem;
+  line-height: 1.28;
+  letter-spacing: -0.1rem;
+}
+
+h4 {
+  font-size: 1.75rem;
+  line-height: 1.4;
+  letter-spacing: -0.08rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+pre {
+  white-space: pre-line;
+}
+
+/* Larger than phablet */
+
+@media (min-width: 550px) {
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 2.4rem;
+    /* letter-spacing: -0.08rem; */
+  }
+  /* h3 {
+    font-size: 3.6rem;
+  } */
+  h3 {
+    font-size: 3rem;
+  }
+  h4 {
+    font-size: 2.4rem;
+  }
+  h5 {
+    font-size: 1.5rem;
+  }
+  p {
+    margin-top: 0;
+    /* letter-spacing: 0.005em; */
+    /* letter-spacing: normal; */
+    /* letter-spacing: -0.01rem; */
+  }
+  body {
+    font-size: 1.7rem;
+    line-height: 1.55;
+  }
+}
