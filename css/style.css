@@ -151,6 +151,12 @@ section {
 .item a:focus {
   border-bottom-color: var(--link-color);
 }
+
+.item:hover h5::after,
+.item a:focus h5::after {
+  content: ' →';
+}
+
 .item a:hover,
 .item a:focus {
   text-decoration: none;
