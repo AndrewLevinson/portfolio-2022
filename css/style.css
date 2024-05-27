@@ -31,28 +31,11 @@ a:focus {
   transition: 0.2s ease-in background-color;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 4rem;
-  padding: 0 5rem;
-}
 
-@media (max-width: 550px) {
-  nav {
-    padding: 0 5vw;
-  }
-}
 
-.logo-flex,
-.nav-links {
+.logo-flex {
   display: flex;
   align-items: center;
-}
-
-.nav-links {
-  gap: 2rem;
 }
 
 .logo-flex .block {
@@ -104,15 +87,45 @@ nav {
   }
 }
 
-.nav-links a {
-  font-size: 1.6rem;
+nav {
+  position: absolute;
+  top: 4rem;
+  left: 20px;
 }
 
 main {
-  width: 90vw;
   max-width: 600px;
   margin: 10rem auto;
+  padding: 0 20px;
   flex-grow: 1;
+}
+
+@media(min-width: 551px) {
+  nav {
+    left: unset;
+    right: 5vw;
+  }
+}
+
+@media(min-width: 768px) {
+  main {
+    max-width: 1200px;
+    padding: 0 5rem;
+    gap: 100px;
+    display: grid;
+    grid-template-columns: 40% 1fr;
+  }
+
+  header {
+    position: sticky;
+    top: 10rem;
+    align-self: start;
+    max-width: 375px;
+  }
+
+  .scroll-area {
+    padding-top: 10px;
+  }
 }
 
 header .intro {
