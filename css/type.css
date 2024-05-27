@@ -49,9 +49,9 @@ h6 {
 
 h1 {
   font-size: 4rem;
-  line-height: 1;
+  line-height: 0.9;
   letter-spacing: -0.1rem;
-  font-weight: 300;
+  font-weight: 800;
   margin-bottom: 0;
 }
 
@@ -96,8 +96,8 @@ pre {
 @media (min-width: 550px) {
   h1 {
     font-size: 5.5rem;
-    line-height: .95;
-    margin-bottom: 5px;
+    line-height: 0.85;
+    margin-bottom: 3px;
   }
 
   h2 {
