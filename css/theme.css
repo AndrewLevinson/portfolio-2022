@@ -9,7 +9,7 @@
     --link-color: #228176;
     --header-text-color: #383636;
     --spacer-background: hsl(197, 37%, 97%);
-    --grey-mid: #66605f;
+    --grey-mid: hsl(173, 4%, 39%);
     --grey-light: hsla(13, 16%, 89%, 0.5);
 
     --project-border-color: hsla(173, 8%, 82%, 0.4);
