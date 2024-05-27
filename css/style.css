@@ -110,7 +110,7 @@ nav {
 
 main {
   width: 90vw;
-  max-width: 640px;
+  max-width: 600px;
   margin: 10rem auto;
   flex-grow: 1;
 }
