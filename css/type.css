@@ -15,7 +15,7 @@ html {
 
 body {
   font-size: 1.6em;
-  line-height: 1.525;
+  line-height: 1.45;
   font-weight: 400;
   letter-spacing: normal;
   /* letter-spacing: 0.005em; */
@@ -129,6 +129,6 @@ pre {
 
   body {
     font-size: 1.6rem;
-    line-height: 1.525;
+    line-height: 1.45;
   }
 }
