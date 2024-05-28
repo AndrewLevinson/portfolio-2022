@@ -31,8 +31,6 @@ a:focus {
   transition: 0.2s ease-in background-color;
 }
 
-
-
 .logo-flex {
   display: flex;
   align-items: center;
@@ -89,19 +87,20 @@ a:focus {
 
 nav {
   position: absolute;
-  top: 4rem;
+  top: 3rem;
   left: 20px;
 }
 
 main {
   max-width: 600px;
-  margin: 10rem auto;
+  margin: 13rem auto;
   padding: 0 20px;
   flex-grow: 1;
 }
 
 @media(min-width: 551px) {
   nav {
+    top: 4rem;
     left: unset;
     right: 5vw;
   }
@@ -128,14 +127,24 @@ main {
   }
 }
 
-header .intro {
-  color: var(--text-color);
+header {
   margin-bottom: 6rem;
-  text-align: left;
 }
 
-section {
-  margin-bottom: 7rem;
+.header-links {
+  margin: 1.25rem 0 0 0;
+}
+
+.header-links li {
+  display: inline-block;
+}
+
+.header-links li:not(:last-of-type)::after {
+  content: '•';
+  margin: 0 1.25rem;
+  color: var(--link-color);
+  font-size: 2.5rem;
+  line-height: 1;
 }
 
 .section-title {
@@ -209,10 +218,10 @@ section {
   text-decoration: none;
 }
 
-/* .item a:hover h5,
-.item a:focus h5 {
-  opacity: 0.75;
-} */
+.item i {
+  opacity: 0.6;
+  margin-left: 3px;
+}
 
 footer {
   position: relative;
@@ -224,32 +233,9 @@ footer {
   background-color: var(--spacer-background);
 }
 
-footer.links {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
 .footer-note {
   font-size: 1.4rem;
   color: var(--grey-mid);
-}
-
-.links ul {
-  margin: 1.5rem auto 2.5rem;
-  text-align: center;
-}
-
-.links ul li {
-  display: inline-block;
-}
-
-.links ul li:not(:last-of-type)::after {
-  content: '•';
-  margin: 0 1.25rem;
-  color: var(--link-color);
-  font-size: 2.5rem;
-  line-height: 1;
 }
 
 footer .avatar {
@@ -268,7 +254,7 @@ footer .avatar {
   transition: transform 0.3s ease-in-out;
 }
 
-.links a:hover .avatar {
+footer a:hover .avatar {
   cursor: pointer;
   transform: translateX(-50%) rotate(3deg);
   border-color: var(--link-color);
