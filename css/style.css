@@ -34,6 +34,9 @@ a:focus {
 .logo-flex {
   display: flex;
   align-items: center;
+  position: absolute;
+  top: 3rem;
+  left: 20px;
 }
 
 .logo-flex .block {
@@ -85,12 +88,6 @@ a:focus {
   }
 }
 
-nav {
-  position: absolute;
-  top: 3rem;
-  left: 20px;
-}
-
 main {
   max-width: 600px;
   margin: 13rem auto;
@@ -99,7 +96,7 @@ main {
 }
 
 @media(min-width: 551px) {
-  nav {
+  .logo-flex {
     top: 4rem;
     left: unset;
     right: 5vw;
