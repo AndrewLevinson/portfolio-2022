@@ -68,14 +68,6 @@ a:focus {
   transition: all 0.3s ease-in-out;
 }
 
-.logo-flex .name {
-  margin-left: 5px;
-  text-transform: uppercase;
-  line-height: 1;
-  font-size: 15px;
-  font-weight: 500;
-}
-
 @keyframes shapeshift {
 
   0%,
@@ -136,6 +128,10 @@ header {
   display: inline-block;
 }
 
+.header-links li a:focus {
+  color: var(--logo-color-block-2);
+}
+
 .header-links li:not(:last-of-type)::after {
   content: '•';
   margin: 0 1.25rem;
@@ -161,7 +157,7 @@ header {
   margin-top: -2px;
 }
 
-.item h5 {
+.item h4 {
   font-size: 1.8rem;
   line-height: 1.25;
   margin: 0;
@@ -175,7 +171,7 @@ header {
   display: inline-block;
   font-size: 1.6rem;
   line-height: 1.45;
-  margin-top: 0.25rem;
+  margin-top: 0.3rem;
   letter-spacing: -0.03rem;
 }
 
@@ -194,7 +190,7 @@ header {
   border-bottom-color: var(--link-color);
 }
 
-.item h5::after {
+.item h4::after {
   content: '→';
   display: inline-block;
   vertical-align: text-top;
@@ -204,8 +200,8 @@ header {
   transition: 0.3s ease-in-out all;
 }
 
-.item:hover h5::after,
-.item a:focus h5::after {
+.item:hover h4::after,
+.item a:focus h4::after {
   opacity: 1;
   transform: translateX(0);
 }
@@ -216,8 +212,9 @@ header {
 }
 
 .item i {
-  opacity: 0.6;
+  opacity: 0.75;
   margin-left: 3px;
+  font-size: 90%;
 }
 
 footer {
