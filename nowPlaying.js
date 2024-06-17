@@ -1,5 +1,5 @@
-fetch('/api/spotify-track.mjs')
+fetch('/api/spotify-track')
   .then(res => res.json())
   .then(data => {
-    console.log(data);
+    console.log('hi', data);
   });
