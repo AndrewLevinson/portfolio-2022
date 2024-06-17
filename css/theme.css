@@ -12,6 +12,8 @@
     --logo-color-block-1: #803b3b;
     --logo-color-block-2: #228176;
     --logo-color-block-3: #3b4480;
+
+    --spotify-icon-color: #1ed760;
   }
 }
 
@@ -29,5 +31,7 @@
     --logo-color-block-1: #e9c46a;
     --logo-color-block-2: #65b87e;
     --logo-color-block-3: #716dd1;
+
+    --spotify-icon-color: #f0e8e6;
   }
 }
