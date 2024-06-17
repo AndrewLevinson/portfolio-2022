@@ -3,7 +3,7 @@ fetch('/api/spotify-track')
   .then(res => res.json())
   .then(data => {
     console.log('hi', data);
-    const songInfo = document.querySelector('.song-into');
+    const songInfo = document.querySelector('.song-info');
 
     songInfo.innerHTML = `
       <h5>
