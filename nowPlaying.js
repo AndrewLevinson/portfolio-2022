@@ -1,5 +1,5 @@
-const fetcher = (...args) => fetch(...args).then(res => res.json());
-
-const { data } = fetcher('/api/spotify-track');
-
-console.log(data);
+fetch('/api/spotify-track')
+  .then(res => res.json())
+  .then(data => {
+    console.log(data);
+  });
