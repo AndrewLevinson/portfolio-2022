@@ -1,17 +1,17 @@
-console.log('yo');
 fetch('/api/spotify-track')
   .then(res => res.json())
   .then(data => {
     console.log('hi', data);
-    const songInfo = document.querySelector('.song-info');
+    const songInfo = document.querySelector('.playing');
 
     songInfo.innerHTML = `
+    <div class="song">
       <h5>
             Last song:
           </h5>
          <div class="flex">
-            <img src=${data.albumImageUrl} alt={album image for ${data.album} by ${data.artist}} width={70}
-              height={70} />
+            <img src=${data.albumImageUrl} alt=album image for ${data.album} by ${data.artist} width="70"
+              height="70" />
             <div class="info">
               <span>${data.title}</span>
               <span>${data.artist}</span>
@@ -24,6 +24,17 @@ fetch('/api/spotify-track')
               </div>
             </div>
           </div>
-      
+
+          </div>
+         <span class="icon">
+            <svg viewBox='0 0 567 171'>
+              <title>Spotify_Logo_RGB_Green</title>
+              <g stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'>
+                <path
+                  d='M137.532,76.477 C110.538,60.446 66.012,58.972 40.243,66.793 C36.105,68.048 31.729,65.712 30.475,61.574 C29.221,57.434 31.555,53.061 35.696,51.803 C65.277,42.824 114.451,44.558 145.527,63.005 C149.25,65.215 150.471,70.022 148.264,73.738 C146.056,77.46 141.245,78.687 137.532,76.477 Z M136.648,100.221 C134.755,103.294 130.737,104.257 127.668,102.371 C105.163,88.537 70.846,84.53 44.221,92.612 C40.768,93.655 37.121,91.708 36.073,88.262 C35.032,84.809 36.98,81.169 40.426,80.119 C70.842,70.89 108.652,75.36 134.5,91.245 C137.569,93.135 138.535,97.155 136.648,100.221 Z M126.401,123.024 C124.897,125.491 121.683,126.265 119.225,124.761 C99.559,112.742 74.807,110.027 45.657,116.686 C42.848,117.33 40.049,115.569 39.408,112.761 C38.764,109.952 40.518,107.153 43.333,106.512 C75.233,99.219 102.597,102.358 124.67,115.846 C127.131,117.349 127.906,120.564 126.401,123.024 Z M87.996,2.237 C41.746,2.237 4.252,39.729 4.252,85.979 C4.252,132.232 41.746,169.723 87.996,169.723 C134.247,169.723 171.739,132.232 171.739,85.979 C171.739,39.729 134.247,2.237 87.996,2.237 L87.996,2.237 Z'>
+                </path>
+              </g>
+            </svg>
+          </span>
       `;
   });
