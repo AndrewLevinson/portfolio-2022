@@ -103,6 +103,7 @@ main {
   main {
     max-width: 1200px;
     padding: 0 5rem;
+    margin: 12rem auto;
     gap: 100px;
     display: grid;
     grid-template-columns: 40% 1fr;
@@ -110,7 +111,7 @@ main {
 
   header {
     position: sticky;
-    top: 13rem;
+    top: 12rem;
     align-self: start;
     max-width: 420px;
   }
