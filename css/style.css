@@ -9,6 +9,11 @@ html {
   }
 }
 
+*::selection {
+  color: var(--background-color);
+  background-color: var(--text-color);
+}
+
 a {
   text-decoration-color: transparent;
   color: var(--link-color);
@@ -28,7 +33,6 @@ a:focus {
   flex-direction: column;
   min-height: 100vh;
   background-color: var(--background-color);
-  transition: 0.2s ease-in background-color;
 }
 
 .logo-flex {
@@ -82,7 +86,7 @@ a:focus {
 
 main {
   max-width: 600px;
-  margin: 13rem auto;
+  margin: 8rem auto;
   padding: 0 20px;
   flex-grow: 1;
 }
@@ -120,41 +124,13 @@ header {
   margin-bottom: 6rem;
 }
 
-.header-links {
-  margin: 1.25rem 0 0 0;
-}
-
-.header-links li {
-  display: inline-block;
-}
-
-.header-links li a:focus {
-  color: var(--logo-color-block-2);
-}
-
-.header-links li:not(:last-of-type)::after {
-  content: '•';
-  margin: 0 1.25rem;
-  color: var(--link-color);
-  font-size: 2.5rem;
-  line-height: 1;
-}
-
 .section-title {
   color: var(--grey-mid);
   margin-bottom: -5px;
   font-size: 1.6rem;
-  line-height: 1.4;
+  line-height: 1;
   letter-spacing: -0.03rem;
   font-weight: 400;
-}
-
-.svg-icon {
-  width: 1em;
-  height: 1em;
-  margin-right: 5px;
-  vertical-align: middle;
-  margin-top: -2px;
 }
 
 .item h4 {
