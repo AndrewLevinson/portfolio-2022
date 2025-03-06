@@ -125,6 +125,15 @@ header {
   margin-bottom: 6rem;
 }
 
+.intro {
+  margin-bottom: 0.5rem;
+}
+
+.contact svg {
+  vertical-align: text-bottom;
+  margin-right: 5px;
+}
+
 .section-title {
   color: var(--grey-mid);
   margin-bottom: -5px;
