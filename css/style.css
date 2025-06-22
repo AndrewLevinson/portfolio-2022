@@ -15,6 +15,19 @@ a:focus {
   outline: none;
 }
 
+@media(max-width: 767px) {
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    z-index: 1;
+    background-color: var(--project-border-color);
+  }
+}
+
 /* main page */
 .container {
   position: relative;
@@ -64,10 +77,13 @@ header {
 .section-title {
   color: var(--grey-mid);
   margin-bottom: -5px;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   line-height: 1;
   letter-spacing: -0.03rem;
   font-weight: 400;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--project-border-color);
+  padding-bottom: 0.75rem;
 }
 
 .item h4 {
@@ -80,10 +96,10 @@ header {
 }
 
 .item p {
-  color: var(--text-color);
+  color: var(--grey-mid);
   display: inline-block;
-  font-size: 1.6rem;
-  line-height: 1.45;
+  font-size: 1.5rem;
+  line-height: 1.4;
   margin-top: 0.3rem;
   letter-spacing: -0.03rem;
 }
