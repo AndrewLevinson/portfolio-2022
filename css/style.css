@@ -15,19 +15,6 @@ a:focus {
   outline-color: var(--link-color);
 }
 
-@media(max-width: 767px) {
-  body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    z-index: 1;
-    background-color: var(--project-border-color);
-  }
-}
-
 /* main page */
 main {
   max-width: 490px;
