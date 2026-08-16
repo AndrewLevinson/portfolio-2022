@@ -4,104 +4,110 @@
 }
 
 a {
-  text-decoration-color: transparent;
+  text-decoration-color: var(--link-color);
   color: var(--link-color);
   text-decoration-thickness: 0.125em;
 }
 
 a:hover,
 a:focus {
-  text-decoration-color: var(--link-color);
-  outline: none;
+  text-decoration-color: transparent;
+  outline-color: var(--link-color);
 }
 
 /* main page */
-.container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: var(--background-color);
-}
-
 main {
-  max-width: 600px;
-  margin: 8rem auto;
+  max-width: 490px;
+  margin: 8rem auto 3rem auto;
   padding: 0 20px;
-  flex-grow: 1;
 }
 
-@media(min-width: 768px) {
-  main {
-    max-width: 1200px;
-    padding: 0 5rem;
-    margin: 12rem auto;
-    gap: 100px;
-    display: grid;
-    grid-template-columns: 40% 1fr;
-  }
 
-  header {
-    position: sticky;
-    top: 12rem;
-    align-self: start;
-    max-width: 420px;
-  }
-
-  .scroll-area {
-    padding-top: 10px;
-  }
-}
-
+/* header and intro */
 header {
-  margin-bottom: 6rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 2px solid var(--project-border-color);
 }
 
-.intro {
-  margin-bottom: 1rem;
-}
-
-.section-title {
-  color: var(--grey-mid);
-  margin-bottom: -5px;
-  font-size: 1.6rem;
+span.location {
+  font-size: 0.6875rem;
+  margin-bottom: 0.5rem;
   line-height: 1;
-  letter-spacing: -0.03rem;
-  font-weight: 400;
+  text-transform: uppercase;
+  display: block;
+  color: var(--secondary-text-color);
 }
 
-.item h4 {
-  font-size: 1.8rem;
-  line-height: 1.25;
-  margin: 0;
-  font-weight: 400;
-  color: var(--link-color);
-  letter-spacing: -0.02rem;
-}
-
-.item p {
-  color: var(--text-color);
+/* 
+span.location::before {
+  content: '';
   display: inline-block;
-  font-size: 1.6rem;
-  line-height: 1.45;
-  margin-top: 0.3rem;
-  letter-spacing: -0.03rem;
+  background: var(--accent-color);
+  width: 0.725em;
+  height: 0.725em;
+  vertical-align: middle;
+  margin-top: -0.065rem;
+  margin-right: 0.2rem;
+  border-radius: 3px;
+} */
+
+p.intro {
+  font-size: 1.5rem;
+  letter-spacing: -1%;
 }
+
+p.intro span {
+  display: block;
+  margin-top: 0.625rem;
+  color: var(--secondary-text-color);
+}
+
+
+/* content sections */
+h3.section-title {
+  color: var(--primary-color);
+}
+
+h3.section-title span {
+  font-weight: 700;
+}
+
 
 .item a {
-  border: 0.125em solid transparent;
-  border-bottom-color: var(--project-border-color);
-  padding: 1.5rem;
-  padding-left: 0;
-  transition: border 0.2s ease-in-out;
+  padding: 1rem 1.25rem 1rem 1.5rem;
   position: relative;
   display: block;
+  text-decoration-color: transparent;
+  background: var(--primary-color-5);
+  border-radius: 3px;
+  margin-bottom: 30px;
+  border-left: 8px solid var(--accent-color);
+}
+
+.item a::before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: var(--primary-color-10);
 }
 
 .item:hover a,
 .item a:focus {
   border-bottom-color: var(--link-color);
+
 }
+
+.item h4 {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+
 
 .item h4::after {
   content: '→';
@@ -124,25 +130,40 @@ header {
   text-decoration: none;
 }
 
+.item p {
+  display: inline-block;
+  margin-top: 0.3rem;
+}
+
+.item span {
+  color: var(--secondary-text-color);
+  font-size: 0.75rem;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0;
+}
+
 .item i {
   opacity: 0.75;
   margin-left: 3px;
   font-size: 90%;
 }
 
+
+/* footer */
 footer {
   position: relative;
   display: flex;
   justify-content: center;
   width: 100%;
   align-items: center;
-  padding: 5rem 5rem 3rem;
+  padding: 3rem 3rem 3rem;
   background-color: var(--spacer-background);
 }
 
 .footer-note {
-  font-size: 1.4rem;
-  color: var(--grey-mid);
+  font-size: 0.875rem;
+  color: var(--secondary-text-color);
 }
 
 footer .avatar {
@@ -165,4 +186,58 @@ footer a:hover .avatar {
   cursor: pointer;
   transform: translateX(-50%) rotate(3deg);
   border-color: var(--link-color);
+}
+
+
+/* temp hiring module */
+.hiring-module {
+  border: 1px dashed var(--project-border-color);
+  margin-top: 1.25rem;
+  padding: 1rem;
+  position: relative;
+  border-radius: 3px;
+
+  &>h5 {
+    font-size: 1.1rem;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      margin-right: 0.5rem;
+      background: var(--accent-color);
+      width: 0.5em;
+      height: 0.5em;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin-top: -4px;
+      animation: blink 2.25s ease-in-out infinite;
+    }
+
+  }
+
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* hide work section for now */
+.work {
+  display: none;
+}
+
+header {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border: none;
 }

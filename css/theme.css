@@ -1,21 +1,31 @@
-@media (prefers-color-scheme: light) {
   body {
-    --background-color: #fff;
-    --text-color: #302f2f;
-    --link-color: #803b3b;
-    --header-text-color: #383636;
-    --spacer-background: hsl(0, 37%, 97%);
-    --grey-mid: hsl(0, 7%, 39%);
+    --background-color: #F4F5F2;
+    background-color: var(--background-color);
 
-    --project-border-color: hsla(0, 5%, 75%, 0.4);
+    --primary-color-100: #2F3321;
+    --primary-color-90: oklch(from var(--primary-color-100) l c h / 0.9);
+    --primary-color-80: oklch(from var(--primary-color-100) l c h / 0.8);
+    --primary-color-70: oklch(from var(--primary-color-100) l c h / 0.7);
+    --primary-color-60: oklch(from var(--primary-color-100) l c h / 0.6);
+    --primary-color-50: oklch(from var(--primary-color-100) l c h / 0.5);
+    --primary-color-40: oklch(from var(--primary-color-100) l c h / 0.4);
+    --primary-color-30: oklch(from var(--primary-color-100) l c h / 0.3);
+    --primary-color-20: oklch(from var(--primary-color-100) l c h / 0.2);
+    --primary-color-10: oklch(from var(--primary-color-100) l c h / 0.1);
+    --primary-color-5: oklch(from var(--primary-color-100) l c h / 0.05);
 
-    --logo-color-block-1: #803b3b;
-    --logo-color-block-2: #228176;
-    --logo-color-block-3: #3b4480;
+    --text-color: var(--primary-color-100);
+    --link-color: var(--primary-color-100);
+    --header-text-color: var(--primary-color-100);
+    --spacer-background: #fff;
+    --secondary-text-color: var(--primary-color-60);
+
+
+    --accent-color: #5B5E50;
+    --project-border-color: var(--primary-color-80);
   }
-}
 
-@media (prefers-color-scheme: dark) {
+  /* @media (prefers-color-scheme: dark) {
   body {
     --background-color: #240b05;
     --text-color: #f0e8e6;
@@ -30,4 +40,4 @@
     --logo-color-block-2: #65b87e;
     --logo-color-block-3: #716dd1;
   }
-}
+} */
